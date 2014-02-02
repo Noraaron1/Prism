@@ -98,12 +98,6 @@ public class Ignore {
 		if( !event( actionTypeName, player.getWorld() ) ){
 			return false;
 		}
-
-		// Does the player have perms to ignore this action type?
-		if( player.hasPermission("prism.ignore.tracking."+actionTypeName) ){
-			Prism.debug("Player has permission node to ignore " + actionTypeName);
-			return false;
-		}
 		
 		return event( player );
 		
